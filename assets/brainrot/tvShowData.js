@@ -8,12 +8,12 @@ export const tvShowData = [
     timeSink: 8,
     adPressure: 3,
     frictionToIntent: 5,
-    cognitiveCaptureNegative: 23,
+    cognitiveCaptureNegative: 5.75,
     educational: 4,
     quality: 7,
     moralLesson: 5,
     theme: 7,
-    cognitiveNutrition: 23,
+    cognitiveNutrition: 5.75,
     total: 23,
     notes: 0
   },
@@ -25,14 +25,14 @@ export const tvShowData = [
     timeSink: 7,
     adPressure: 10,
     frictionToIntent: 6,
-    cognitiveCaptureNegative: 31,
+    cognitiveCaptureNegative: 7.75,
     educational: 4,
     quality: 8,
     moralLesson: 9,
     theme: 8,
-    cognitiveNutrition: 29,
+    cognitiveNutrition: 7.25,
     total: 29,
-    notes: -2
+    notes: -0.5
   },
   {
     id: 3,
@@ -42,14 +42,14 @@ export const tvShowData = [
     timeSink: 9,
     adPressure: 5,
     frictionToIntent: 6,
-    cognitiveCaptureNegative: 27,
+    cognitiveCaptureNegative: 6.75,
     educational: 4,
     quality: 5,
     moralLesson: 8,
     theme: 6,
-    cognitiveNutrition: 27,
+    cognitiveNutrition: 5.75,
     total: 27,
-    notes: 0
+    notes: -1
   },
   {
     id: 4,
@@ -59,14 +59,14 @@ export const tvShowData = [
     timeSink: 6,
     adPressure: 1,
     frictionToIntent: 2,
-    cognitiveCaptureNegative: 12,
+    cognitiveCaptureNegative: 3,
     educational: 6,
     quality: 7,
     moralLesson: 7,
     theme: 6,
-    cognitiveNutrition: 26,
+    cognitiveNutrition: 6.5,
     total: 26,
-    notes: 14
+    notes: 3.5
   },
   {
     id: 5,
@@ -76,14 +76,14 @@ export const tvShowData = [
     timeSink: 4,
     adPressure: 3,
     frictionToIntent: 4,
-    cognitiveCaptureNegative: 13,
+    cognitiveCaptureNegative: 3.25,
     educational: 7,
     quality: 9,
     moralLesson: 9,
     theme: 8,
-    cognitiveNutrition: 33,
+    cognitiveNutrition: 8.25,
     total: 33,
-    notes: 20
+    notes: 5
   },
   {
     id: 6,
@@ -93,14 +93,14 @@ export const tvShowData = [
     timeSink: 4,
     adPressure: 5,
     frictionToIntent: 4,
-    cognitiveCaptureNegative: 20,
+    cognitiveCaptureNegative: 5,
     educational: 5,
     quality: 8,
     moralLesson: 10,
     theme: 8,
-    cognitiveNutrition: 31,
+    cognitiveNutrition: 7.75,
     total: 31,
-    notes: 11
+    notes: 2.75
   },
   {
     id: 7,
@@ -110,14 +110,14 @@ export const tvShowData = [
     timeSink: 6,
     adPressure: 8,
     frictionToIntent: 5,
-    cognitiveCaptureNegative: 29,
+    cognitiveCaptureNegative: 7.25,
     educational: 3,
     quality: 8,
     moralLesson: 8,
     theme: 8,
-    cognitiveNutrition: 27,
+    cognitiveNutrition: 6.75,
     total: 27,
-    notes: -2
+    notes: -0.5
   },
   {
     id: 8,
@@ -127,14 +127,14 @@ export const tvShowData = [
     timeSink: 6,
     adPressure: 7,
     frictionToIntent: 6,
-    cognitiveCaptureNegative: 26,
+    cognitiveCaptureNegative: 6.5,
     educational: 7,
     quality: 8,
     moralLesson: 9,
     theme: 7,
-    cognitiveNutrition: 31,
+    cognitiveNutrition: 7.75,
     total: 31,
-    notes: 5
+    notes: 1.25
   },
   {
     id: 9,
@@ -144,14 +144,14 @@ export const tvShowData = [
     timeSink: 9,
     adPressure: 7,
     frictionToIntent: 9,
-    cognitiveCaptureNegative: 34,
+    cognitiveCaptureNegative: 8.5,
     educational: 3,
     quality: 4,
     moralLesson: 4,
     theme: 6,
-    cognitiveNutrition: 17,
+    cognitiveNutrition: 4.25,
     total: 17,
-    notes: -17
+    notes: -4.25
   },
   {
     id: 10,
@@ -161,33 +161,33 @@ export const tvShowData = [
     timeSink: 6,
     adPressure: 3,
     frictionToIntent: 7,
-    cognitiveCaptureNegative: 24,
+    cognitiveCaptureNegative: 6,
     educational: 3,
     quality: 6,
     moralLesson: null,
     theme: null,
-    cognitiveNutrition: 9,
+    cognitiveNutrition: 5,
     total: 9,
-    notes: -15
+    notes: -1
   }
 ];
 
 // Helper functions for data analysis
 export const getBrainrotLevel = (notes) => {
   if (notes === null || notes === undefined) return "Unknown";
-  if (notes >= 15) return "Excellent";
-  if (notes >= 5) return "Good";
+  if (notes >= 7.5) return "Excellent";
+  if (notes >= 2.5) return "Good";
   if (notes >= 0) return "Neutral";
-  if (notes >= -10) return "Concerning";
+  if (notes >= -5) return "Concerning";
   return "High Brainrot";
 };
 
 export const getBrainrotColor = (notes) => {
   if (notes === null || notes === undefined) return "#9ca3af";
-  if (notes >= 15) return "#10b981";
-  if (notes >= 5) return "#34d399";
+  if (notes >= 7.5) return "#10b981";
+  if (notes >= 2.5) return "#34d399";
   if (notes >= 0) return "#fbbf24";
-  if (notes >= -10) return "#fb923c";
+  if (notes >= -5) return "#fb923c";
   return "#ef4444";
 };
 
